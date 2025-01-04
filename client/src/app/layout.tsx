@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+import { Analytics } from "@vercel/analytics/react"
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from "@/providers/theme-provider"
 import { Navbar } from "@/components/navbar"
@@ -21,6 +22,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
