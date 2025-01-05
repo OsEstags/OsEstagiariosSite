@@ -28,7 +28,14 @@ export function Hero() {
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto lg:mx-0">
-            Na Comunidade Os Estagiários, unimos jovens talentos para transformar sonhos em conquistas na área de tecnologia. Com eventos gratuitos, dicas práticas de carreira e conexões poderosas, criamos um espaço onde você pode descobrir seu potencial, desenvolver habilidades e dar passos confiantes na sua jornada. Junte-se a nós e seja parte de uma comunidade que acredita no poder da união para construir um futuro brilhante na tecnologia!
+              Na Comunidade Os Estagiários, unimos jovens talentos para
+              transformar sonhos em conquistas na área de tecnologia. Com
+              eventos gratuitos, dicas práticas de carreira e conexões
+              poderosas, criamos um espaço onde você pode descobrir seu
+              potencial, desenvolver habilidades e dar passos confiantes na sua
+              jornada. Junte-se a nós e seja parte de uma comunidade que
+              acredita no poder da união para construir um futuro brilhante na
+              tecnologia!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
@@ -58,7 +65,6 @@ export function Hero() {
               src="/osestagiarios.png"
               alt="Ilustração da Equipe"
               className="absolute inset-0 w-full h-full object-contain  select-none"
-
             />
           </div>
         </div>

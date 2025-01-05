@@ -452,7 +452,7 @@ export default function CalendarioEventos() {
                       </div>
                       <Dialog>
                         <DialogTrigger asChild>
-                        <Button
+                          <Button
                             variant="outline"
                             size="sm"
                             className="bg-gradient-to-r from-[#09e75e] to-[#5ce1e6] text-primary-foreground border-none hover:opacity-90 transition-all duration-300 hover:scale-105"
