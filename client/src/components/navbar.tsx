@@ -1,42 +1,42 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Menu, ChevronDown } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isSmallScreen, setIsSmallScreen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
-    }
+      setIsScrolled(window.scrollY > 0);
+    };
 
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 1024) // Considerando telas menores que 1024px como "pequenas"
-    }
+      setIsSmallScreen(window.innerWidth < 1024); // Considerando telas menores que 1024px como "pequenas"
+    };
 
-    handleScroll() // Verifica o scroll inicial
-    handleResize() // Verifica o tamanho da tela inicial
+    handleScroll(); // Verifica o scroll inicial
+    handleResize(); // Verifica o tamanho da tela inicial
 
-    window.addEventListener("scroll", handleScroll)
-    window.addEventListener("resize", handleResize)
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const navItems = [
     { label: "Início", href: "/" },
@@ -45,9 +45,9 @@ export function Navbar() {
     { label: "Eventos", href: "/eventos" },
     { label: "Cursos", href: "/cursos" },
     { label: "Projetos", href: "/projetos" },
-  ]
+  ];
 
-  const shouldShowBackground = isScrolled || isSmallScreen
+  const shouldShowBackground = isScrolled || isSmallScreen;
 
   return (
     <nav
@@ -136,6 +136,5 @@ export function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
-
